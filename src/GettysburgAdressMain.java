@@ -29,7 +29,18 @@ public class GettysburgAdressMain {
 			{
 				if (speech.length() > longestWord.length() ) 
 				{
+					
 					longestWord = speech;
+					
+					for (int i = 0; i < longestWord.length(); i++) 
+					{
+						if (longestWord.charAt(i) == '-') 
+						{
+							longestWord = longestWord.replace('-', ' ');
+							longestWord = longestWord.substring(0,i);
+							
+						}
+					}
 					
 				}
 			}
@@ -41,6 +52,8 @@ public class GettysburgAdressMain {
 				count++;
 				
 			}
+			
+			
 			
 			
 		}
