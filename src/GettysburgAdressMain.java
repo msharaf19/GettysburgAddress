@@ -37,19 +37,20 @@ public class GettysburgAdressMain {
 			
 			for( String str: address) 
 			{
-				avgLength =+ str.length();
+				avgLength += str.length();
+				count++;
 				
 			}
 			
 			
-
 		}
+		double average = avgLength/count;
 		
 		System.out.println("The longest word: " + longestWord);
 		
 		
 		
-		System.out.println("The average length is: "+ avgLength);
+		System.out.println("The average length is: "+ average);
 		
 		file.close();
 	}
